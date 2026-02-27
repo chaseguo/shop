@@ -1,1 +1,30 @@
+# 环境变量
 .env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+.next/
+dist/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# 编辑器
+.cursor/
+.vscode/
+*.swp
+
+# 日志
+*.log
+logs/

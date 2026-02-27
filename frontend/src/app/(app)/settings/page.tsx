@@ -35,7 +35,7 @@ export default function SettingsPage() {
   const [tab, setTab] = useState<(typeof tabs)[number]>("模型配置");
 
   return (
-    <div className="space-y-5 max-w-3xl">
+    <div className="space-y-5 max-w-4xl">
       {/* Tabs */}
       <div className="flex gap-1 p-1 rounded-xl bg-muted border border-border w-fit">
         {tabs.map(t => (

@@ -1,6 +1,3 @@
 {
-  "buildCommand": "cd bullgeo && npm install && npm run build",
-  "outputDirectory": "bullgeo/.next",
-  "installCommand": "cd bullgeo && npm install",
-  "framework": "nextjs"
+  "rootDirectory": "bullgeo"
 }

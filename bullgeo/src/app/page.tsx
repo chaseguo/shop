@@ -108,10 +108,10 @@ function Hero() {
         {/* Stats bar */}
         <div className="animate-fade-in-up animate-delay-400 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
           {[
-            { value: "3+", label: "覆盖主流大模型", sub: "豆包 / Kimi / DeepSeek" },
-            { value: "40%", label: "竞品首位推荐率", sub: "奇富借条 2026-02" },
-            { value: "4类", label: "负面主题自动识别", sub: "资费 / 利率 / 审批 / 品牌" },
-            { value: "90天", label: "推荐率提升目标", sub: "≥ 30% 改善承诺" },
+            { value: "全覆盖", label: "中国大模型全覆盖", sub: "豆包 / Kimi / DeepSeek" },
+            { value: "可见度", label: "发现",             sub: "精准识别曝光机会" },
+            { value: "人机",   label: "机器与人工协作",   sub: "AI 驱动 + 专家把控" },
+            { value: "动态",   label: "跟踪数据",         sub: "实时监测持续改善" },
           ].map((s) => (
             <div
               key={s.label}

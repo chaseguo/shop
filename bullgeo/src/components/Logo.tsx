@@ -13,8 +13,8 @@ export function Logo({ className = "", size = "md" }: LogoProps) {
   const { text } = sizeMap[size];
   return (
     <span className={`inline-flex items-baseline font-extrabold tracking-tight ${text} ${className}`}>
-      <span style={{ color: "#ef4444" }}>BULL</span>
-      <span style={{ color: "#3b82f6" }}>GEO</span>
+      <span style={{ color: "#d44000" }}>BULL</span>
+      <span style={{ color: "#3652d9" }}>GEO</span>
     </span>
   );
 }

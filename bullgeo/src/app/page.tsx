@@ -1,8 +1,11 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   ArrowRight, Radar, AlertTriangle, BookOpen,
   BarChart3, Shield, Zap, CheckCircle2, ChevronRight,
-  Activity, Layers, Target, Users,
+  Activity, Layers, Target, Users, Eye, EyeOff,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -81,14 +84,11 @@ function Hero() {
         </div>
 
         <h1 className="animate-fade-in-up animate-delay-100 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-6">
-          让中国大模型{" "}
-          <span className="gradient-text">更愿意推荐你</span>
-          <br className="hidden sm:block" />
-          而不是忽略你
+          让大模型<span className="gradient-text">看见你</span>，<span className="gradient-text">相信你</span>！
         </h1>
 
         <p className="animate-fade-in-up animate-delay-200 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10">
-          面向金融信贷 App 的 GEO + ASO 一体化引擎。<br />
+          面向垂直类 App 的 GEO + ASO 一体化引擎。<br />
           构建<strong className="text-foreground font-semibold">可监控、可诊断、可修复</strong>的 LLM 推荐优化系统。
         </p>
 
@@ -501,7 +501,7 @@ function Footer() {
               <Logo size="md" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              面向金融信贷 App 的 LLM 推荐优化平台
+              面向垂直类 App 的 LLM 推荐优化平台
             </p>
           </div>
 
@@ -558,8 +558,102 @@ function Footer() {
   );
 }
 
+/* ─── Password Gate ─── */
+function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
+  const [pw, setPw] = useState("");
+  const [show, setShow] = useState(false);
+  const [error, setError] = useState(false);
+  const [shake, setShake] = useState(false);
+
+  const submit = () => {
+    if (pw === "bullgeo2026") {
+      sessionStorage.setItem("bullgeo-auth", "1");
+      onUnlock();
+    } else {
+      setError(true);
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-background hero-mesh noise">
+      <div
+        className={`w-full max-w-sm mx-6 rounded-3xl border bg-card shadow-2xl p-10 flex flex-col items-center gap-6 transition-transform ${shake ? "animate-[shake_0.4s_ease]" : ""}`}
+        style={shake ? { animation: "shake 0.4s ease" } : {}}
+      >
+        {/* Logo */}
+        <div className="flex flex-col items-center gap-1 mb-2">
+          <span className="text-4xl font-extrabold tracking-tight">
+            <span style={{ color: "#d44000" }}>BULL</span>
+            <span style={{ color: "#3652d9" }}>GEO</span>
+          </span>
+          <p className="text-xs text-muted-foreground">LLM 推荐优化平台</p>
+        </div>
+
+        <div className="w-full">
+          <label className="text-xs font-medium text-muted-foreground mb-2 block">访问密码</label>
+          <div className="relative">
+            <input
+              type={show ? "text" : "password"}
+              value={pw}
+              onChange={e => { setPw(e.target.value); setError(false); }}
+              onKeyDown={e => e.key === "Enter" && submit()}
+              placeholder="请输入访问密码"
+              className={`w-full rounded-xl border px-4 py-3 pr-10 text-sm bg-background outline-none transition-colors
+                ${error ? "border-red-400 focus:border-red-500" : "border-input focus:border-ring"}`}
+              autoFocus
+            />
+            <button
+              type="button"
+              onClick={() => setShow(v => !v)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {show ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+            </button>
+          </div>
+          {error && (
+            <p className="text-xs text-red-500 mt-1.5">密码错误，请重试</p>
+          )}
+        </div>
+
+        <button
+          onClick={submit}
+          className="w-full h-11 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90 active:scale-[0.98]"
+          style={{ background: "linear-gradient(135deg, #d44000, #3652d9)" }}
+        >
+          进入平台
+        </button>
+
+        <p className="text-xs text-muted-foreground text-center">
+          内部访问，请勿转发
+        </p>
+      </div>
+
+      <style>{`
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          20%       { transform: translateX(-8px); }
+          40%       { transform: translateX(8px); }
+          60%       { transform: translateX(-6px); }
+          80%       { transform: translateX(6px); }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 /* ─── Page ─── */
 export default function LandingPage() {
+  const [unlocked, setUnlocked] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    setUnlocked(sessionStorage.getItem("bullgeo-auth") === "1");
+  }, []);
+
+  if (unlocked === null) return null;
+  if (!unlocked) return <PasswordGate onUnlock={() => setUnlocked(true)} />;
+
   return (
     <div className="min-h-screen">
       <Navbar />

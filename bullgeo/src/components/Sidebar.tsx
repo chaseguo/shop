@@ -53,8 +53,8 @@ export default function Sidebar() {
         >
           {collapsed ? (
             <span className="font-extrabold text-sm leading-none">
-              <span style={{ color: "#ef4444" }}>B</span>
-              <span style={{ color: "#3b82f6" }}>G</span>
+              <span style={{ color: "#d44000" }}>B</span>
+              <span style={{ color: "#3652d9" }}>G</span>
             </span>
           ) : (
             <div className="flex flex-col">

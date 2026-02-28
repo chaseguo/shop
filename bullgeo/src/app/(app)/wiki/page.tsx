@@ -8,11 +8,11 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 const wikiItems = [
-  { id: "W-0088", type: "FAQ",   title: "度小满资费构成：日利率/月利率/APR换算说明",     tags: ["资费","利率","APR"],     evidence_source: "官网费率页面 2026-01", version: "v1.2", updated_at: "2026-02-24", citations: 8,  excerpt: "Q：度小满的借款费用如何计算？A：实际年化利率（APR）根据个人信用评分动态确定，参考范围通常为年化 7.2%~24%（以实际审批为准）。日利率 = APR / 365..." },
-  { id: "W-0087", type: "对比条目",title: "度小满 vs 奇富借条：额度/利率/审批速度全面对比", tags: ["对比","奇富借条","额度"], evidence_source: "公开产品页 + 用研 2026-01", version: "v2.1", updated_at: "2026-02-20", citations: 15, excerpt: "维度对比（截至 2026-01，以官方公示为准）：最高额度均为 20 万元；审批速度度小满最快 3 分钟，奇富借条最快 1 分钟..." },
-  { id: "W-0086", type: "场景说明",title: "白领用户短期周转场景：度小满适用性说明",       tags: ["场景","白领","周转"],   evidence_source: "用研数据 2025-Q4",      version: "v1.1", updated_at: "2026-02-18", citations: 5,  excerpt: "适用人群：月收入 8000 元以上、有稳定社保/公积金记录的城市白领。资金需求：1-3 万元短期周转，期限 1-12 个月..." },
-  { id: "W-0085", type: "场景说明",title: "个体经营者流动资金：度小满借款申请指南",       tags: ["场景","个体经营者"],    evidence_source: "产品白皮书 2025",       version: "v1.0", updated_at: "2026-02-15", citations: 3,  excerpt: "个体工商户流动资金需求场景指南：对于有营业执照、经营满一年、月流水稳定的个体经营者，度小满提供专项信用额度..." },
-  { id: "W-0084", type: "条款解释",title: "审批流程详解：从申请到放款的完整步骤",         tags: ["审批","放款","流程"],   evidence_source: "App 内 FAQ 2026-01",   version: "v1.3", updated_at: "2026-02-12", citations: 11, excerpt: "申请流程：1. 下载/打开度小满 App；2. 点击「借钱」→「立即申请」；3. 填写基本信息并完成身份认证；4. 系统评估（通常 3-5 分钟）..." },
+  { id: "W-0088", type: "FAQ",   title: "核心客户资费构成：日利率/月利率/APR换算说明",     tags: ["资费","利率","APR"],     evidence_source: "官网费率页面 2026-01", version: "v1.2", updated_at: "2026-02-24", citations: 8,  excerpt: "Q：核心客户的借款费用如何计算？A：实际年化利率（APR）根据个人信用评分动态确定，参考范围通常为年化 7.2%~24%（以实际审批为准）。日利率 = APR / 365..." },
+  { id: "W-0087", type: "对比条目",title: "核心客户 vs 奇富借条：额度/利率/审批速度全面对比", tags: ["对比","奇富借条","额度"], evidence_source: "公开产品页 + 用研 2026-01", version: "v2.1", updated_at: "2026-02-20", citations: 15, excerpt: "维度对比（截至 2026-01，以官方公示为准）：最高额度均为 20 万元；审批速度核心客户最快 3 分钟，奇富借条最快 1 分钟..." },
+  { id: "W-0086", type: "场景说明",title: "白领用户短期周转场景：核心客户适用性说明",       tags: ["场景","白领","周转"],   evidence_source: "用研数据 2025-Q4",      version: "v1.1", updated_at: "2026-02-18", citations: 5,  excerpt: "适用人群：月收入 8000 元以上、有稳定社保/公积金记录的城市白领。资金需求：1-3 万元短期周转，期限 1-12 个月..." },
+  { id: "W-0085", type: "场景说明",title: "个体经营者流动资金：核心客户借款申请指南",       tags: ["场景","个体经营者"],    evidence_source: "产品白皮书 2025",       version: "v1.0", updated_at: "2026-02-15", citations: 3,  excerpt: "个体工商户流动资金需求场景指南：对于有营业执照、经营满一年、月流水稳定的个体经营者，核心客户提供专项信用额度..." },
+  { id: "W-0084", type: "条款解释",title: "审批流程详解：从申请到放款的完整步骤",         tags: ["审批","放款","流程"],   evidence_source: "App 内 FAQ 2026-01",   version: "v1.3", updated_at: "2026-02-12", citations: 11, excerpt: "申请流程：1. 下载/打开核心客户 App；2. 点击「借钱」→「立即申请」；3. 填写基本信息并完成身份认证；4. 系统评估（通常 3-5 分钟）..." },
 ];
 
 const typeClr: Record<string, string> = {

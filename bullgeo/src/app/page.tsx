@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { Logo } from "@/components/Logo";
 
 /* ─── Navbar ─── */
 function Navbar() {
@@ -21,11 +22,7 @@ function Navbar() {
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link href="/" className="flex items-center group">
-          <img
-            src="/brand/bullgeo-logo.svg"
-            alt="BullGEO"
-            className="h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
-          />
+          <Logo size="lg" className="transition-opacity group-hover:opacity-80" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -80,7 +77,7 @@ function Hero() {
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <div className="animate-fade-in-up inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/8 px-4 py-1.5 text-sm font-medium text-primary mb-6">
           <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse" />
-          2026 年内部抽样：度小满推荐率低于行业均值 5%
+          2026 年内部抽样：核心客户推荐率低于行业均值 5%
         </div>
 
         <h1 className="animate-fade-in-up animate-delay-100 text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground leading-[1.1] mb-6">
@@ -333,7 +330,7 @@ function Metrics() {
 
             <div className="mt-6 grid grid-cols-2 gap-3">
               {[
-                { label: "度小满当前 LRCI", value: "47.2", delta: "", color: "text-amber-500" },
+                { label: "核心客户当前 LRCI", value: "47.2", delta: "", color: "text-amber-500" },
                 { label: "行业均值 LRCI", value: "58.0", delta: "+10.8", color: "text-muted-foreground" },
               ].map((m) => (
                 <div key={m.label} className="rounded-2xl border bg-card p-4 shadow-sm">
@@ -381,8 +378,8 @@ const faqs = [
     a: "传统 SEO 优化搜索引擎排名，ASO 优化应用商店排名。BullGEO 专注【大模型推荐优化（GEO）】——当用户向豆包、Kimi、DeepSeek 等 AI 咨询信贷 App 时，如何提升你被推荐的概率和排位。GEO 和 ASO 的差异在于，前者需要结构化证据内容，后者需要关键词和评分，两者互为补充。",
   },
   {
-    q: "度小满推荐率低的根本原因是什么？",
-    a: "基于 2026 年 2 月内部抽样，度小满在三大模型中的推荐率（综合 23%）低于行业均值（28%），主因有三：① 可引用证据内容不足，模型在生成回答时缺少高质量参考材料；② 负面主题（资费不清、利率误解）占比偏高，拉低置信度；③ 结构化对比内容缺失，奇富借条在此维度明显领先。",
+    q: "核心客户推荐率低的根本原因是什么？",
+    a: "基于 2026 年 2 月内部抽样，核心客户在三大模型中的推荐率（综合 23%）低于行业均值（28%），主因有三：① 可引用证据内容不足，模型在生成回答时缺少高质量参考材料；② 负面主题（资费不清、利率误解）占比偏高，拉低置信度；③ 结构化对比内容缺失，奇富借条在此维度明显领先。",
   },
   {
     q: "是否有刷量或违规操控的风险？",
@@ -501,11 +498,7 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-3">
-              <img
-                src="/brand/bullgeo-logo.svg"
-                alt="BullGEO"
-                className="h-7 w-auto object-contain"
-              />
+              <Logo size="md" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               面向金融信贷 App 的 LLM 推荐优化平台

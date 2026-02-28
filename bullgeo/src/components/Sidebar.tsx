@@ -20,6 +20,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
 } from "lucide-react";
+import { Logo } from "@/components/Logo";
 import { useSidebar } from "@/contexts/sidebar-context";
 
 const navItems = [
@@ -47,21 +48,21 @@ export default function Sidebar() {
         <div
           className={cn(
             "flex h-16 items-center border-b border-sidebar-border flex-shrink-0 overflow-hidden",
-            collapsed ? "justify-center px-0" : "px-4"
+            collapsed ? "justify-center px-0" : "px-5"
           )}
         >
           {collapsed ? (
-            <img
-              src="/brand/bullgeo-icon.svg"
-              alt="BullGEO"
-              className="h-8 w-8 rounded-xl object-cover flex-shrink-0"
-            />
+            <span className="font-extrabold text-sm leading-none">
+              <span style={{ color: "#ef4444" }}>B</span>
+              <span style={{ color: "#3b82f6" }}>G</span>
+            </span>
           ) : (
-            <img
-              src="/brand/bullgeo-logo.svg"
-              alt="BullGEO"
-              className="h-9 w-auto object-contain"
-            />
+            <div className="flex flex-col">
+              <Logo size="md" />
+              <span className="text-[10px] text-muted-foreground leading-tight mt-0.5 whitespace-nowrap">
+                LLM 推荐优化平台
+              </span>
+            </div>
           )}
         </div>
 

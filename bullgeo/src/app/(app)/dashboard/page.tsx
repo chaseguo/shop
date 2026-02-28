@@ -50,7 +50,7 @@ const kpis = [
 const brandData = [
   { name: "奇富借条", value: 40, color: "#10b981" },
   { name: "洋钱罐",   value: 28, color: "#3b82f6" },
-  { name: "度小满",   value: 18, color: "#8b5cf6" },
+  { name: "核心客户",   value: 18, color: "#8b5cf6" },
   { name: "马上消费", value: 8,  color: "#f59e0b" },
   { name: "其他",     value: 6,  color: "#94a3b8" },
 ];
@@ -59,7 +59,7 @@ const tasks = [
   { id: "T-041", title: '补充【提前还款是否收费】FAQ',    priority: "high",   status: "待处理", model: "Kimi" },
   { id: "T-040", title: '更新【日利率计算方式】条款解释', priority: "high",   status: "审核中", model: "豆包" },
   { id: "T-039", title: "新增白领场景化说明",             priority: "medium", status: "已完成", model: "DeepSeek" },
-  { id: "T-038", title: '澄清【度小满品牌归属】说明',     priority: "medium", status: "已完成", model: "Kimi" },
+  { id: "T-038", title: '澄清【核心客户品牌归属】说明',     priority: "medium", status: "已完成", model: "Kimi" },
 ];
 
 const priorityColors: Record<string, string> = {
@@ -116,7 +116,7 @@ export default function DashboardPage() {
         {/* LRCI gauge */}
         <div className="col-span-12 lg:col-span-3 rounded-2xl border bg-card p-5 shadow-sm">
           <div className="text-sm font-semibold text-foreground">LRCI 综合指数</div>
-          <div className="text-xs text-muted-foreground mt-0.5 mb-1">度小满 · 本期 47.2 / 均值 58.0</div>
+          <div className="text-xs text-muted-foreground mt-0.5 mb-1">核心客户 · 本期 47.2 / 均值 58.0</div>
           <LRCIGauge value={47} />
           <div className="space-y-1.5 mt-1">
             {[
@@ -151,7 +151,7 @@ export default function DashboardPage() {
             <div className="text-sm font-semibold text-foreground">竞争力雷达对比</div>
             <span className="text-xs text-muted-foreground">三模型综合 · 五维</span>
           </div>
-          <div className="text-xs text-muted-foreground mb-1">度小满 vs 奇富借条 vs 洋钱罐</div>
+          <div className="text-xs text-muted-foreground mb-1">核心客户 vs 奇富借条 vs 洋钱罐</div>
           <ModelRadar height={224} />
         </div>
       </div>
@@ -226,7 +226,7 @@ export default function DashboardPage() {
           <div className="mt-3 flex gap-2 rounded-xl border border-amber-200 dark:border-amber-900/50 bg-amber-50 dark:bg-amber-950/20 p-3">
             <Zap className="h-3.5 w-3.5 text-amber-500 flex-shrink-0 mt-0.5" />
             <p className="text-xs text-amber-700 dark:text-amber-300 leading-relaxed">
-              <strong>本期洞察：</strong>Kimi 对度小满利率描述存在误差（偏高约 3%），建议优先澄清。
+              <strong>本期洞察：</strong>Kimi 对核心客户利率描述存在误差（偏高约 3%），建议优先澄清。
             </p>
           </div>
         </div>

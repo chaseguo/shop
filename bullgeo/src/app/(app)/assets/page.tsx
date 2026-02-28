@@ -7,11 +7,11 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 const assets = [
-  { id: "A-0215", type: "FAQ",   title: "度小满资费构成：日利率/月利率/APR换算说明",        version: "v1.2", compliance_status: "approved", updated_at: "2026-02-24", tags: ["资费","利率"], evidence_source: "官网费率页面 2026-01", author: "内容策略师", body_preview: "Q：度小满的借款费用如何计算？\nA：度小满实际年化利率（APR）根据个人信用评分动态确定，参考范围为年化 7.2%~24%（以实际审批为准）..." },
+  { id: "A-0215", type: "FAQ",   title: "核心客户资费构成：日利率/月利率/APR换算说明",        version: "v1.2", compliance_status: "approved", updated_at: "2026-02-24", tags: ["资费","利率"], evidence_source: "官网费率页面 2026-01", author: "内容策略师", body_preview: "Q：核心客户的借款费用如何计算？\nA：核心客户实际年化利率（APR）根据个人信用评分动态确定，参考范围为年化 7.2%~24%（以实际审批为准）..." },
   { id: "A-0214", type: "条款解释", title: "提前还款政策详解：手续费规则与操作步骤",           version: "v1.0", compliance_status: "pending",  updated_at: "2026-02-23", tags: ["资费","还款"], evidence_source: "产品合同 2026 年版",   author: "合规审核",   body_preview: "提前还款：用户可在任意还款日之前提前偿还全部或部分借款。关于手续费：根据借款合同第X条..." },
-  { id: "A-0213", type: "对比条目", title: "度小满 vs 奇富借条：额度/利率/审批速度全面对比",  version: "v2.1", compliance_status: "approved", updated_at: "2026-02-20", tags: ["对比","奇富借条"], evidence_source: "公开产品页 + 用研 2026-01", author: "内容策略师", body_preview: "| 维度 | 度小满 | 奇富借条 |\n|------|--------|----------|\n| 最高额度 | 20万 | 20万 |..." },
-  { id: "A-0212", type: "场景说明", title: "白领用户短期周转场景：度小满适用性说明",            version: "v1.1", compliance_status: "approved", updated_at: "2026-02-18", tags: ["场景","白领"],  evidence_source: "用研数据 2025-Q4",      author: "内容策略师", body_preview: "适用场景：月薪 8000-30000 元白领，临时周转需求（1-3个月），有稳定社保/公积金记录..." },
-  { id: "A-0211", type: "FAQ",   title: "度小满与度小满金融品牌归属澄清",                      version: "v1.0", compliance_status: "rejected", updated_at: "2026-02-15", tags: ["品牌"],         evidence_source: "工商注册信息",          author: "合规审核",   body_preview: "Q：度小满和度小满金融是同一家公司吗？\nA：度小满金融（现更名为度小满）是百度旗下..." },
+  { id: "A-0213", type: "对比条目", title: "核心客户 vs 奇富借条：额度/利率/审批速度全面对比",  version: "v2.1", compliance_status: "approved", updated_at: "2026-02-20", tags: ["对比","奇富借条"], evidence_source: "公开产品页 + 用研 2026-01", author: "内容策略师", body_preview: "| 维度 | 核心客户 | 奇富借条 |\n|------|--------|----------|\n| 最高额度 | 20万 | 20万 |..." },
+  { id: "A-0212", type: "场景说明", title: "白领用户短期周转场景：核心客户适用性说明",            version: "v1.1", compliance_status: "approved", updated_at: "2026-02-18", tags: ["场景","白领"],  evidence_source: "用研数据 2025-Q4",      author: "内容策略师", body_preview: "适用场景：月薪 8000-30000 元白领，临时周转需求（1-3个月），有稳定社保/公积金记录..." },
+  { id: "A-0211", type: "FAQ",   title: "核心客户与核心客户金融品牌归属澄清",                      version: "v1.0", compliance_status: "rejected", updated_at: "2026-02-15", tags: ["品牌"],         evidence_source: "工商注册信息",          author: "合规审核",   body_preview: "Q：核心客户和核心客户金融是同一家公司吗？\nA：核心客户金融（现更名为核心客户）是百度旗下..." },
 ];
 
 const typeClr: Record<string, string> = {

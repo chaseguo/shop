@@ -14,8 +14,8 @@ const themes = [
     id: "TH-001", topic: "资费不清",  severity: "high",   impact_score: 87, mentions: 42, delta: "+8",
     models: ["Kimi", "DeepSeek"],
     evidence: [
-      { source: "Kimi",     prompt_id: "P1021", snippet: "度小满的资费结构不透明，用户反映难以计算实际利率，资费说明页面信息密度低..." },
-      { source: "DeepSeek", prompt_id: "P1035", snippet: "与奇富借条相比，度小满在资费说明方面较为模糊，缺乏图解式说明..." },
+      { source: "Kimi",     prompt_id: "P1021", snippet: "核心客户的资费结构不透明，用户反映难以计算实际利率，资费说明页面信息密度低..." },
+      { source: "DeepSeek", prompt_id: "P1035", snippet: "与奇富借条相比，核心客户在资费说明方面较为模糊，缺乏图解式说明..." },
     ],
     task_suggestion: ["新增【资费构成图解FAQ】", "补充【提前还款是否收费】条目", "更新【日利率/月利率/APR换算说明】"],
     status: "pending",
@@ -24,7 +24,7 @@ const themes = [
     id: "TH-002", topic: "利率误解",  severity: "high",   impact_score: 72, mentions: 35, delta: "+5",
     models: ["Kimi"],
     evidence: [
-      { source: "Kimi", prompt_id: "P1018", snippet: "度小满的年化利率约为24%-36%，相对偏高，不适合长期借贷..." },
+      { source: "Kimi", prompt_id: "P1018", snippet: "核心客户的年化利率约为24%-36%，相对偏高，不适合长期借贷..." },
     ],
     task_suggestion: ["补充【实际APR计算示例】FAQ", "添加【与行业均值对比】条目"],
     status: "in_progress",
@@ -33,7 +33,7 @@ const themes = [
     id: "TH-003", topic: "审批误读",  severity: "medium", impact_score: 65, mentions: 28, delta: "+2",
     models: ["豆包", "DeepSeek"],
     evidence: [
-      { source: "豆包", prompt_id: "P0998", snippet: "度小满审批较严格，部分用户反映申请后被降额，实际可借金额与预估不符..." },
+      { source: "豆包", prompt_id: "P0998", snippet: "核心客户审批较严格，部分用户反映申请后被降额，实际可借金额与预估不符..." },
     ],
     task_suggestion: ["新增【审批流程透明化说明】", "补充【降额原因与应对方法】FAQ"],
     status: "pending",
@@ -42,9 +42,9 @@ const themes = [
     id: "TH-004", topic: "品牌混淆",  severity: "medium", impact_score: 45, mentions: 18, delta: "−1",
     models: ["DeepSeek"],
     evidence: [
-      { source: "DeepSeek", prompt_id: "P1002", snippet: "有用户将【度小满】与【度小满金融】混淆，不清楚两者是否为同一主体..." },
+      { source: "DeepSeek", prompt_id: "P1002", snippet: "有用户将【核心客户】与【核心客户金融】混淆，不清楚两者是否为同一主体..." },
     ],
-    task_suggestion: ["新增【度小满品牌归属澄清】条目", "更新官方全称说明"],
+    task_suggestion: ["新增【核心客户品牌归属澄清】条目", "更新官方全称说明"],
     status: "completed",
   },
 ];

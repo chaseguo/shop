@@ -10,8 +10,8 @@ import { cn } from "@/lib/utils";
 const TrendLine = dynamic(() => import("@/components/charts/TrendLine"), { ssr: false });
 
 const records = [
-  { id: "D-0412", asset_title: "度小满资费构成：APR换算说明", asset_id: "W-0088", channel: "知乎",   post_url: "#", publish_status: "published", indexed_status: "indexed",     published_at: "2026-02-22", views: 1842, engagement: 234, cited_estimate: "高" },
-  { id: "D-0411", asset_title: "度小满 vs 奇富借条：全面对比", asset_id: "W-0087", channel: "百家号", post_url: "#", publish_status: "published", indexed_status: "indexed",     published_at: "2026-02-20", views: 3205, engagement: 421, cited_estimate: "高" },
+  { id: "D-0412", asset_title: "核心客户资费构成：APR换算说明", asset_id: "W-0088", channel: "知乎",   post_url: "#", publish_status: "published", indexed_status: "indexed",     published_at: "2026-02-22", views: 1842, engagement: 234, cited_estimate: "高" },
+  { id: "D-0411", asset_title: "核心客户 vs 奇富借条：全面对比", asset_id: "W-0087", channel: "百家号", post_url: "#", publish_status: "published", indexed_status: "indexed",     published_at: "2026-02-20", views: 3205, engagement: 421, cited_estimate: "高" },
   { id: "D-0410", asset_title: "白领用户短期周转场景说明",     asset_id: "W-0086", channel: "小红书", post_url: "#", publish_status: "published", indexed_status: "indexed",     published_at: "2026-02-18", views: 892,  engagement: 156, cited_estimate: "中" },
   { id: "D-0409", asset_title: "审批流程详解：从申请到放款",   asset_id: "W-0084", channel: "知乎",   post_url: null, publish_status: "pending", indexed_status: "not_indexed", published_at: null,          views: null, engagement: null, cited_estimate: null },
   { id: "D-0408", asset_title: "学生用户申请须知与风险提示",   asset_id: "W-0083", channel: "百家号", post_url: "#", publish_status: "published", indexed_status: "failed",      published_at: "2026-02-10", views: 445,  engagement: 78,  cited_estimate: "低" },

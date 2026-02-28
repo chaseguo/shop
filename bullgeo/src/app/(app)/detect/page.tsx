@@ -190,7 +190,7 @@ export default function DetectPage() {
                   </div>
                   <span className="text-xl font-bold" style={{ color }}>{base}%</span>
                 </div>
-                <p className="text-xs text-muted-foreground mb-3">度小满推荐率 · 2026-02</p>
+                <p className="text-xs text-muted-foreground mb-3">核心客户推荐率 · 2026-02</p>
                 <TrendLine data={gen(base)} color={color} height={72} />
               </div>
             ))}
@@ -212,7 +212,7 @@ export default function DetectPage() {
               data={[
                 { name: "奇富借条", value: 40, color: "#10b981" },
                 { name: "洋钱罐",   value: 28, color: "#3b82f6" },
-                { name: "度小满",   value: 18, color: "#8b5cf6" },
+                { name: "核心客户",   value: 18, color: "#8b5cf6" },
                 { name: "马上消费", value: 8,  color: "#f59e0b" },
                 { name: "360金融",  value: 4,  color: "#94a3b8" },
               ]}
@@ -224,9 +224,9 @@ export default function DetectPage() {
             <Zap className="h-4 w-4 text-amber-500 flex-shrink-0 mt-0.5" />
             <div className="text-sm text-amber-700 dark:text-amber-300 leading-relaxed space-y-1">
               <p className="font-semibold">本期诊断摘要</p>
-              <p>• 度小满在豆包的推荐率（35%）低于行业均值约 12pp，主因：奇富借条可引用内容质量更高</p>
-              <p>• DeepSeek 风险型问法对度小满负面提及率上升至 22%，较上月 +4%</p>
-              <p>• Kimi 对度小满利率的描述存在<span className="text-red-500 dark:text-red-400 font-medium">误差（APR 偏高约 3%）</span>，需优先澄清</p>
+              <p>• 核心客户在豆包的推荐率（35%）低于行业均值约 12pp，主因：奇富借条可引用内容质量更高</p>
+              <p>• DeepSeek 风险型问法对核心客户负面提及率上升至 22%，较上月 +4%</p>
+              <p>• Kimi 对核心客户利率的描述存在<span className="text-red-500 dark:text-red-400 font-medium">误差（APR 偏高约 3%）</span>，需优先澄清</p>
             </div>
           </div>
         </div>

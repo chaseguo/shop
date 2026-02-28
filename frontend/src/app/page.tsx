@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  ArrowRight, TrendingUp, Radar, AlertTriangle, BookOpen,
+  ArrowRight, Radar, AlertTriangle, BookOpen,
   BarChart3, Shield, Zap, CheckCircle2, ChevronRight,
   Activity, Layers, Target, Users,
 } from "lucide-react";
@@ -20,11 +20,12 @@ function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary shadow-sm shadow-primary/30 transition-transform group-hover:scale-105">
-            <TrendingUp className="h-4 w-4 text-primary-foreground" />
-          </div>
-          <span className="font-bold text-lg text-foreground">BullGEO</span>
+        <Link href="/" className="flex items-center group">
+          <img
+            src="/brand/bullgeo-logo.svg"
+            alt="BullGEO"
+            className="h-9 w-auto object-contain transition-opacity group-hover:opacity-80"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -477,8 +478,8 @@ function CTABanner() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="rounded-2xl px-8 h-12 text-base border-white/30 text-white hover:bg-white/10 hover:text-white"
+                variant="ghost"
+                className="rounded-2xl px-8 h-12 text-base bg-transparent border border-white/40 text-white hover:bg-white/15 hover:text-white"
                 asChild
               >
                 <Link href="/detect">查看样例报告</Link>
@@ -499,11 +500,12 @@ function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-3">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary">
-                <TrendingUp className="h-3.5 w-3.5 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-foreground">BullGEO</span>
+            <Link href="/" className="inline-block mb-3">
+              <img
+                src="/brand/bullgeo-logo.svg"
+                alt="BullGEO"
+                className="h-7 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               面向金融信贷 App 的 LLM 推荐优化平台

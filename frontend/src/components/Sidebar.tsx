@@ -17,7 +17,6 @@ import {
   BookOpen,
   Share2,
   Settings,
-  TrendingUp,
   PanelLeftClose,
   PanelLeftOpen,
 } from "lucide-react";
@@ -48,21 +47,22 @@ export default function Sidebar() {
         <div
           className={cn(
             "flex h-16 items-center border-b border-sidebar-border flex-shrink-0 overflow-hidden",
-            collapsed ? "justify-center px-0" : "gap-2.5 px-5"
+            collapsed ? "justify-center px-0" : "px-4"
           )}
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary shadow-sm shadow-primary/30 flex-shrink-0">
-            <TrendingUp className="h-4 w-4 text-primary-foreground" />
-          </div>
-          <div
-            className={cn(
-              "min-w-0 transition-all duration-300",
-              collapsed ? "w-0 opacity-0" : "w-auto opacity-100"
-            )}
-          >
-            <div className="font-bold text-sm text-sidebar-foreground leading-tight whitespace-nowrap">BullGEO</div>
-            <div className="text-[10px] text-muted-foreground leading-tight mt-0.5 whitespace-nowrap">LLM 推荐优化</div>
-          </div>
+          {collapsed ? (
+            <img
+              src="/brand/bullgeo-icon.svg"
+              alt="BullGEO"
+              className="h-8 w-8 rounded-xl object-cover flex-shrink-0"
+            />
+          ) : (
+            <img
+              src="/brand/bullgeo-logo.svg"
+              alt="BullGEO"
+              className="h-9 w-auto object-contain"
+            />
+          )}
         </div>
 
         {/* Nav */}

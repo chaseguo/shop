@@ -6,7 +6,7 @@
 
 ```
 bullgeo/
-├── frontend/          # Next.js 前端（TypeScript + Tailwind + ECharts）
+├── bullgeo/           # Next.js 前端（TypeScript + Tailwind + ECharts）
 ├── backend/           # FastAPI 后端（Python）
 ├── docker-compose.yml # 一键启动所有服务
 └── .env.example       # 环境变量模板
@@ -50,7 +50,7 @@ uvicorn app.main:app --reload
 
 **前端**
 ```bash
-cd frontend
+cd bullgeo
 npm install
 npm run dev
 ```
